@@ -27,7 +27,7 @@ Angular CLI
 Known Bugs
 There are no known bugs currently. The page works as expected.
 Support and Contact Details
-For any comments,suggestions,feedback or inquiries, contact me via email: pwachira900@gmail.com
+For any comments,suggestions,feedback or inquiries, contact me via email: teddymachoka98@yahoo.com
 
 Make contributions to the code.
 
