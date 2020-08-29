@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 
 import { user } from './user';
 import {environment} from '../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable()
 
 export class ProfileRequest {
 
 
-  // tslint:disable-next-line:no-inferrable-types
+  
   fromURL: string = 'https://api.github.com';
   constructor(private http: HttpClient) {
   }
