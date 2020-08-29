@@ -23,8 +23,7 @@ import { SweetAlertService } from './sweet-alert';
     
 
   ],
-  // providers: [ GithubService, ProfileRequestService],
-
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
