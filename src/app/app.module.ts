@@ -6,12 +6,9 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GithubService } from './github.service';
-import {ProfileRequestService} from './profile-request.service';
 import { RouterModule, Routes } from '@angular/router';
-import { SweetAlertService } from './sweet-alert.service';
+import { SweetAlertService } from './sweet-alert';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent }
@@ -19,7 +16,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
