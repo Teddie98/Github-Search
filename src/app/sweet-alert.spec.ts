@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SweetAlertService } from './sweet-alert.service';
+import { SweetAlertService } from './sweet-alert';
 
 describe('SweetAlertService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
