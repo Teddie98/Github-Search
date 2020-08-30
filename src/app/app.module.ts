@@ -8,10 +8,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GithubService } from './github.service';
-import {ProfileRequestService} from './profile-request.service';
+import { Github } from './Github';
+import {ProfileRequest} from './profile-request';
 import { RouterModule, Routes } from '@angular/router';
-import { SweetAlertService } from './sweet-alert.service';
+import { SweetAlert } from './sweet-alert';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent }

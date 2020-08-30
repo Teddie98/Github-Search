@@ -1,23 +1,22 @@
 
-// tslint:disable-next-line:import-blacklist
-import { Observable} from 'rxjs/Rx';
+
 import { repos} from '../repos';
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { GithubService } from '../github.service';
+import { Github } from '../Github';
 import {environment} from '../../environments/environment';
-import {ProfileRequestService} from '../profile-request.service';
+import {ProfileRequest} from '../profile-request';
 import { user } from '../user';
-import { SweetAlertService } from 'angular-sweetalert-service';
+import { SweetAlert } from '../sweet-alert';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  providers: [ GithubService, ProfileRequestService, SweetAlertService]
+  providers: [ Github, ProfileRequest, SweetAlert]
 })
 export class DashboardComponent implements OnInit {
-  userName = 'peter-wachira';
+  userName = 'Teddie98';
   repos: repos[];
   users: user[];
 
@@ -25,7 +24,7 @@ export class DashboardComponent implements OnInit {
   errorMessage;
   windowScrolled: boolean;
   // tslint:disable-next-line:max-line-length
-  constructor( private githubService: GithubService, private profileRequest: ProfileRequestService, private alertService: SweetAlertService, @Inject(DOCUMENT) private document: Document ) {
+  constructor( private githubService: Github, private profileRequest: ProfileRequest, private alertService: SweetAlert, @Inject(DOCUMENT) private document: Document ) {
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -46,16 +45,7 @@ export class DashboardComponent implements OnInit {
       }
 
 
-  //   options = {
-  //   title: 'Are you sure?',
-  //   text: 'You won\'t be able to revert this!',
-  //   type: 'warning',
-  //   showCancelButton: true,
-  //   confirmButtonColor: '#3085d6',
-  //   cancelButtonColor: '#d33',
-  //   confirmButtonText: 'Yes, delete it!'
-  // };
-
+  
 
 
 

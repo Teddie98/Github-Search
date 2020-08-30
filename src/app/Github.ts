@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // tslint:disable-next-line:import-blacklist
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 import { repos } from './repos';
 import {environment} from '../environments/environment';
 @Injectable()
 
 
 
-export class GithubService {
+export class Github {
 
   // tslint:disable-next-line:no-inferrable-types
   baseURL: string = 'https://api.github.com';
