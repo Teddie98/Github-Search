@@ -1,34 +1,31 @@
 
 // tslint:disable-next-line:import-blacklist
-import { Observable} from 'rxjs';
+import { Observable} from 'rxjs/Rx';
 import { repos} from '../repos';
 import { Component, OnInit, Inject, HostListener } from '@angular/core';
-import { Github } from '../Github';
+import { GithubService } from '../github.service';
 import {environment} from '../../environments/environment';
-import {ProfileRequest} from '../profile-request';
+import {ProfileRequestService} from '../profile-request.service';
 import { user } from '../user';
-// import { SweetAlert } from '../sweet-alert';
-import { DOCUMENT } from '@angular/common';
+import { SweetAlertService } from 'angular-sweetalert-service';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  providers: [ Github, ProfileRequest,]
+  providers: [ GithubService, ProfileRequestService, SweetAlertService]
 })
-
 export class DashboardComponent implements OnInit {
-  
- 
-  userName = 'Teddie Ted';
+  userName = 'peter-wachira';
   repos: repos[];
-  users: IUser[];
+  users: user[];
 
   loading = false;
   errorMessage;
   windowScrolled: boolean;
   // tslint:disable-next-line:max-line-length
-  constructor( private githubService: Github, private profileRequest: ProfileRequest,  @Inject(DOCUMENT) private document: Document ) {
+  constructor( private githubService: GithubService, private profileRequest: ProfileRequestService, private alertService: SweetAlertService, @Inject(DOCUMENT) private document: Document ) {
   }
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -100,4 +97,3 @@ public getUsers(event: any) {
   }
 
 }
-interface IUser extends user{};
