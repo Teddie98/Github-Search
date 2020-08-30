@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { SweetAlertService } from './sweet-alert';
+// import { SweetAlert } from './sweet-alert';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     
   ],
   imports: [
@@ -22,6 +24,9 @@ import { SweetAlertService } from './sweet-alert';
     HttpClientModule,
     
 
+  ],
+  providers: [
+    // SweetAlert,
   ],
   
   bootstrap: [AppComponent]

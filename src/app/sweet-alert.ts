@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-// tslint:disable-next-line:import-blacklist
 
 @Injectable()
-export declare class SweetAlertService {
+export declare class SweetAlert {
   constructor();
   swal(): any;
   confirm(options: any): any;

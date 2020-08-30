@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 
 
-export class github {
+export class Github {
 
     
     baseURL: string = 'https://api.github.com';

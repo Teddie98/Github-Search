@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SweetAlertService } from './sweet-alert';
+import { SweetAlert } from './sweet-alert';
 
 describe('SweetAlertService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: SweetAlertService = TestBed.get(SweetAlertService);
+    const service: SweetAlert = TestBed.get(SweetAlert);
     expect(service).toBeTruthy();
   });
 });
